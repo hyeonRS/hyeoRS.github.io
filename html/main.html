@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/color.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Jalnan';
+    }
+
+    body {
+        margin: 0;
+    }
+
+    a {
+        text-decoration-line: none;
+    }
+
+    a:visited {
+        color: inherit;
+    }
+
+    a:hover,
+    a:focus {
+        font-weight: bold;
+    }
+
+    /* Top Navication */
+
+    #top-nav {
+        position: fixed;
+        width: 100vw;
+        height: 120px;
+    }
+
+    #top-nav > span {
+        width: 25%;
+        font-size: 60px;
+        text-align: center;
+    }
+
+    /* introduce-page  */
+
+    .introduce-page {
+        width: 100vw;
+        height: 960px;
+        scroll-margin-top: 120px; /* nav 높이만큼 여백 확보 */
+    }
+
+    .introduce-page > .content {
+        width: 70vw;
+        height: 600px;
+    }
+
+    /* Page 1 - About Page */
+
+    #page-1 {
+        padding-top: 120px;
+        height: calc(960px + 120px);
+    }
+
+    .introduce-page > .content > div {
+        width: 40%;
+        height: 100%;
+    }
+
+    #profile-img > img{
+        border-radius: 15%;
+        box-shadow : 5px 5px 5px 5px gray ;
+    }
+
+    #profile-info > #info-area {
+        width: 100%;
+        height: 50%;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    .info > span{
+        font-size: 25px;
+    }
+
+    #btn-box {
+        width: 100%;
+    }
+
+
+    button {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+    }
+
+    button:hover {
+        cursor: pointer;
+    }
+
+
+    .contact-item> img{
+        height: 40%;
+    }
+
+    .contact-item > *{
+        font-size: 30px;
+    }
+
+    /* Page 2 - Tech */
+    #page-2 > .content > div{
+        width: 30%;
+    }
+
+    #page-2 > .content > div > img {
+        width: 100%;
+    }
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="back-purple font-white flex-row-align-center" id="top-nav">
+            <span><a href="#page-1">ABOUT</a></span>
+            <span><a href="#page-2">TECH</a></span>
+            <span><a href="#page-3">CONTACT</a></span>
+        </div>
+    </nav>
+
+    <!-- PAGE 1 -->
+    <div class="introduce-page flex-col-align-center" id="page-1">
+        <span class="font-purple" style="font-size: 55px;">About</span>
+        <div class="content flex-row-space-around">
+            <div class="flex-col-align-center" id="profile-img">
+                <img src="../img/emoji.jpg" alt="emoji.jpg">
+            </div>
+
+            <div class="flex-col-space-around" id="profile-info">
+                <div class="flex-col-space-around" id="info-area">
+                    <div class="info">
+                        <span class="font-purple">이름 : </span>
+                        <span>현홍석</span>
+                    </div>
+                    <div class="info">
+                        <span class="font-purple">생년월일 : </span>
+                        <span>2000.09.08</span>
+                    </div>
+                    <div class="info">
+                        <span class="font-purple">거주지 : </span>
+                        <span>인천</span>
+                    </div>
+                    <div class="info">
+                        <span class="font-purple">전공 : </span>
+                        <span>디지털미디어 / 소프트웨어(복수전공)</span>
+                    </div>
+                </div>
+
+                <div class="flex-row-space-around" id="btn-box">
+                    <a href="../html/hobby.html">
+                        <button class="btn back-purple font-white" style="font-size: 20px;">취미 보기</button>
+                    </a>
+                    <a href="../html/mbti.html">
+                        <button class="btn back-purple font-white" style="font-size: 20px;">성격 보기</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 2 -->
+    <div class="introduce-page flex-col-align-center" id="page-2">
+        <h1 class="font-purple" style="font-size: 55px;">Tech</h1>
+        <div class="content flex-row-space-around" style="padding-top: 15px;" >
+            <div class="flex-col-space-around" id="tech-FE">
+                <h3 style="text-align: center;">FE</h3>
+                <img src="../img/react-native-icon.png" alt="">
+            </div>
+            <div class="flex-col-space-around" id="tech-BE">
+                <h3 style="text-align: center;">BE</h3>
+                <img src="../img/spring-boot-logo-icon-hd.png" alt="">
+
+            </div>
+            <div class="flex-col-space-around" id="tech-Tool">
+                <h3 style="text-align: center;">Tool</h3>
+                <img src="../img/intellij-icon.png" alt="">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 3 -->
+    <div class="introduce-page flex-col-align-center" id="page-3">
+        <span class="font-purple" style="font-size: 55px;">Contact</span>
+        <div class="content flex-row-space-around">
+            <div class="contact-item flex-col-space-around">
+                <img src="../img/email-icon.png" alt="">
+                <span class="contact-label font-purple">Email</span>
+                <div> hhsk908@ajou.ac.kr</div>
+            </div>
+            <div class="contact-item flex-col-space-around">
+                <img src="../img/github-icon.png" alt="">
+                <span class="contact-label font-purple">GitHub</span>
+                <a href="https://github.com/hyeonRS">github.com/hyeonRS</a>
+            </div>
+            <div class="contact-item flex-col-space-around">
+                <img src="../img/call-icon.png" alt="">
+                <span class="contact-label font-purple">Phone</span> 
+                <div class="font-black">010-2750-6902</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
